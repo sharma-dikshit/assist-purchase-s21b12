@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DuplicatesReport ToolsVersion="202.0.20200917.63427">
+  <Statistics>
+    <CodebaseCost>8871</CodebaseCost>
+    <TotalDuplicatesCost>222</TotalDuplicatesCost>
+    <TotalFragmentsCost>1036</TotalFragmentsCost>
+  </Statistics>
+  <Duplicates>
+    <Duplicate Cost="74">
+      <Fragment>
+        <FileName>AssistPurchase.Test\ClientQuestionsControllerIntegrationTest.cs</FileName>
+        <OffsetRange Start="2471" End="2670"></OffsetRange>
+        <LineRange Start="62" End="64"></LineRange>
+      </Fragment>
+      <Fragment>
+        <FileName>AssistPurchase.Test\ClientQuestionsControllerIntegrationTest.cs</FileName>
+        <OffsetRange Start="3287" End="3486"></OffsetRange>
+        <LineRange Start="80" End="82"></LineRange>
+      </Fragment>
+    </Duplicate>
+    <Duplicate Cost="74">
+      <Fragment>
+        <FileName>AssistPurchase.Test\ClientQuestionsControllerIntegrationTest.cs</FileName>
+        <OffsetRange Start="2878" End="3077"></OffsetRange>
+        <LineRange Start="71" End="73"></LineRange>
+      </Fragment>
+      <Fragment>
+        <FileName>AssistPurchase.Test\ClientQuestionsControllerIntegrationTest.cs</FileName>
+        <OffsetRange Start="3694" End="3893"></OffsetRange>
+        <LineRange Start="89" End="91"></LineRange>
+      </Fragment>
+    </Duplicate>
+    <Duplicate Cost="74">
+      <Fragment>
+        <FileName>AssistPurchase.Test\ClientQuestionsControllerIntegrationTest.cs</FileName>
+        <OffsetRange Start="4097" End="4296"></OffsetRange>
+        <LineRange Start="98" End="100"></LineRange>
+      </Fragment>
+      <Fragment>
+        <FileName>AssistPurchase.Test\ClientQuestionsControllerIntegrationTest.cs</FileName>
+        <OffsetRange Start="4500" End="4699"></OffsetRange>
+        <LineRange Start="107" End="109"></LineRange>
+      </Fragment>
+      <Fragment>
+        <FileName>AssistPurchase.Test\ClientQuestionsControllerIntegrationTest.cs</FileName>
+        <OffsetRange Start="4917" End="5116"></OffsetRange>
+        <LineRange Start="116" End="118"></LineRange>
+      </Fragment>
+      <Fragment>
+        <FileName>AssistPurchase.Test\ClientQuestionsControllerIntegrationTest.cs</FileName>
+        <OffsetRange Start="5332" End="5531"></OffsetRange>
+        <LineRange Start="125" End="127"></LineRange>
+      </Fragment>
+      <Fragment>
+        <FileName>AssistPurchase.Test\ClientQuestionsControllerIntegrationTest.cs</FileName>
+        <OffsetRange Start="5751" End="5950"></OffsetRange>
+        <LineRange Start="134" End="136"></LineRange>
+      </Fragment>
+      <Fragment>
+        <FileName>AssistPurchase.Test\ClientQuestionsControllerIntegrationTest.cs</FileName>
+        <OffsetRange Start="6168" End="6367"></OffsetRange>
+        <LineRange Start="143" End="145"></LineRange>
+      </Fragment>
+      <Fragment>
+        <FileName>AssistPurchase.Test\ClientQuestionsControllerIntegrationTest.cs</FileName>
+        <OffsetRange Start="6583" End="6782"></OffsetRange>
+        <LineRange Start="152" End="154"></LineRange>
+      </Fragment>
+      <Fragment>
+        <FileName>AssistPurchase.Test\ClientQuestionsControllerIntegrationTest.cs</FileName>
+        <OffsetRange Start="7000" End="7199"></OffsetRange>
+        <LineRange Start="161" End="163"></LineRange>
+      </Fragment>
+      <Fragment>
+        <FileName>AssistPurchase.Test\ClientQuestionsControllerIntegrationTest.cs</FileName>
+        <OffsetRange Start="7393" End="7592"></OffsetRange>
+        <LineRange Start="170" End="172"></LineRange>
+      </Fragment>
+      <Fragment>
+        <FileName>AssistPurchase.Test\ClientQuestionsControllerIntegrationTest.cs</FileName>
+        <OffsetRange Start="7784" End="7983"></OffsetRange>
+        <LineRange Start="179" End="181"></LineRange>
+      </Fragment>
+    </Duplicate>
+  </Duplicates>
+</DuplicatesReport>
