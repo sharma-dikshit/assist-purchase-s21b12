@@ -8,35 +8,19 @@
     </InspectionScope>
   </Information>
   <IssueTypes>
-    <IssueType Id="ArrangeModifiersOrder" Category="Syntax Style" CategoryId="CodeStyleIssues" Description="Adjust modifiers declaration order" Severity="SUGGESTION" WikiUrl="https://www.jetbrains.com/resharperplatform/help?Keyword=ArrangeModifiersOrder" />
     <IssueType Id="ClassNeverInstantiated.Global" Category="Potential Code Quality Issues" CategoryId="CodeSmell" SubCategory="Class is never instantiated" Description="Class is never instantiated: Non-private accessibility" Severity="SUGGESTION" Global="True" WikiUrl="https://www.jetbrains.com/resharperplatform/help?Keyword=ClassNeverInstantiated.Global" />
     <IssueType Id="FieldCanBeMadeReadOnly.Global" Category="Common Practices and Code Improvements" CategoryId="BestPractice" SubCategory="Field can be made readonly" Description="Field can be made readonly: Non-private accessibility" Severity="SUGGESTION" Global="True" WikiUrl="https://www.jetbrains.com/resharperplatform/help?Keyword=FieldCanBeMadeReadOnly.Global" />
-    <IssueType Id="FieldCanBeMadeReadOnly.Local" Category="Common Practices and Code Improvements" CategoryId="BestPractice" SubCategory="Field can be made readonly" Description="Field can be made readonly: Private accessibility" Severity="SUGGESTION" WikiUrl="https://www.jetbrains.com/resharperplatform/help?Keyword=FieldCanBeMadeReadOnly.Local" />
     <IssueType Id="ForCanBeConvertedToForeach" Category="Language Usage Opportunities" CategoryId="LanguageUsage" Description="For-loop can be converted into foreach-loop" Severity="SUGGESTION" WikiUrl="https://www.jetbrains.com/resharperplatform/help?Keyword=ForCanBeConvertedToForeach" />
-    <IssueType Id="InconsistentNaming" Category="Constraints Violations" CategoryId="ConstraintViolation" Description="Inconsistent Naming" Severity="WARNING" WikiUrl="https://www.jetbrains.com/resharperplatform/help?Keyword=InconsistentNaming" />
     <IssueType Id="MemberCanBePrivate.Global" Category="Common Practices and Code Improvements" CategoryId="BestPractice" SubCategory="Member can be made private" Description="Member can be made private: Non-private accessibility" Severity="SUGGESTION" Global="True" WikiUrl="https://www.jetbrains.com/resharperplatform/help?Keyword=MemberCanBePrivate.Global" />
     <IssueType Id="MemberCanBeProtected.Global" Category="Common Practices and Code Improvements" CategoryId="BestPractice" SubCategory="Member can be made protected" Description="Member can be made protected: Non-private accessibility" Severity="SUGGESTION" Global="True" WikiUrl="https://www.jetbrains.com/resharperplatform/help?Keyword=MemberCanBeProtected.Global" />
     <IssueType Id="MethodHasAsyncOverload" Category="Common Practices and Code Improvements" CategoryId="BestPractice" Description="Method has async overload" Severity="SUGGESTION" />
-    <IssueType Id="NotAccessedField.Compiler" Category="Compiler Warnings" CategoryId="CompilerWarnings" Description="Non-accessed field" Severity="WARNING" />
-    <IssueType Id="RedundantNameQualifier" Category="Redundancies in Code" CategoryId="CodeRedundancy" Description="Redundant name qualifier" Severity="WARNING" WikiUrl="https://www.jetbrains.com/resharperplatform/help?Keyword=RedundantNameQualifier" />
-    <IssueType Id="RedundantUsingDirective" Category="Redundancies in Code" CategoryId="CodeRedundancy" Description="Redundant using directive" Severity="WARNING" WikiUrl="https://www.jetbrains.com/resharperplatform/help?Keyword=RedundantUsingDirective" />
     <IssueType Id="UnusedAutoPropertyAccessor.Global" Category="Potential Code Quality Issues" CategoryId="CodeSmell" SubCategory="Auto-property accessor is never used" Description="Auto-property accessor is never used: Non-private accessibility" Severity="WARNING" Global="True" />
-    <IssueType Id="UnusedField.Compiler" Category="Compiler Warnings" CategoryId="CompilerWarnings" Description="Field is never used" Severity="WARNING" />
     <IssueType Id="UnusedMethodReturnValue.Global" Category="Redundancies in Symbol Declarations" CategoryId="DeclarationRedundancy" SubCategory="Method return value is never used" Description="Method return value is never used: Non-private accessibility" Severity="SUGGESTION" Global="True" />
-    <IssueType Id="UnusedType.Global" Category="Redundancies in Symbol Declarations" CategoryId="DeclarationRedundancy" SubCategory="Type is never used" Description="Type is never used: Non-private accessibility" Severity="SUGGESTION" Global="True" WikiUrl="https://www.jetbrains.com/resharperplatform/help?Keyword=UnusedType.Global" />
-    <IssueType Id="UseObjectOrCollectionInitializer" Category="Language Usage Opportunities" CategoryId="LanguageUsage" Description="Use object or collection initializer when possible" Severity="SUGGESTION" WikiUrl="https://www.jetbrains.com/resharperplatform/help?Keyword=UseObjectOrCollectionInitializer" />
   </IssueTypes>
   <Issues>
     <Project Name="AssistPurchase">
-      <Issue TypeId="RedundantUsingDirective" File="AssistPurchase\Controllers\CustomerAlertController.cs" Offset="63-76" Line="3" Message="Using directive is not required by the code and can be safely removed" />
-      <Issue TypeId="MemberCanBePrivate.Global" File="AssistPurchase\Database\MonitoringProductDatabase.cs" Offset="212-215" Line="8" Message="Accessor 'ProductDb.set' can be made private" />
-      <Issue TypeId="MemberCanBePrivate.Global" File="AssistPurchase\Database\MonitoringProductDatabase.cs" Offset="321-327" Line="13" Message="Method 'AddProducts' can be made private" />
-      <Issue TypeId="UseObjectOrCollectionInitializer" File="AssistPurchase\Database\MonitoringProductDatabase.cs" Offset="397-400" Line="15" Message="Use collection initializer" />
       <Issue TypeId="UnusedAutoPropertyAccessor.Global" File="AssistPurchase\Models\MonitoringProducts.cs" Offset="169-173" Line="7" Message="Auto-property accessor is never used" />
       <Issue TypeId="ClassNeverInstantiated.Global" File="AssistPurchase\Program.cs" Offset="124-131" Line="7" Message="Class 'Program' is never instantiated" />
-      <Issue TypeId="MemberCanBePrivate.Global" File="AssistPurchase\Program.cs" Offset="272-278" Line="14" Message="Method 'CreateHostBuilder' can be made private" />
-      <Issue TypeId="RedundantUsingDirective" File="AssistPurchase\Repository\CustomerAlertRepository.cs" Offset="110-133" Line="5" Message="Using directive is not required by the code and can be safely removed" />
-      <Issue TypeId="RedundantNameQualifier" File="AssistPurchase\Repository\CustomerAlertRepository.cs" Offset="2273-2290" Line="64" Message="Qualifier is redundant" />
       <Issue TypeId="UnusedMethodReturnValue.Global" File="AssistPurchase\Repository\IMonitoringDataRepository.cs" Offset="287-293" Line="10" Message="Method 'UpdateProduct' return value is never used" />
       <Issue TypeId="UnusedMethodReturnValue.Global" File="AssistPurchase\Repository\IMonitoringDataRepository.cs" Offset="346-364" Line="11" Message="Method 'RemoveProduct' return value is never used" />
       <Issue TypeId="MemberCanBeProtected.Global" File="AssistPurchase\Repository\MonitoringDataRepository.cs" Offset="224-230" Line="9" Message="Field 'MonitoringProductDb' can be made protected" />
@@ -47,34 +31,12 @@
       <Issue TypeId="UnusedAutoPropertyAccessor.Global" File="AssistPurchase\Startup.cs" Offset="437-441" Line="17" Message="Auto-property accessor is never used" />
     </Project>
     <Project Name="AssistPurchase.Test">
-      <Issue TypeId="RedundantUsingDirective" File="AssistPurchase.Test\ClientQuestionsControllerIntegrationTest.cs" Offset="81-94" Line="4" Message="Using directive is not required by the code and can be safely removed" />
-      <Issue TypeId="RedundantUsingDirective" File="AssistPurchase.Test\ClientQuestionsControllerIntegrationTest.cs" Offset="96-129" Line="5" Message="Using directive is not required by the code and can be safely removed" />
-      <Issue TypeId="RedundantUsingDirective" File="AssistPurchase.Test\ClientQuestionsControllerIntegrationTest.cs" Offset="131-149" Line="6" Message="Using directive is not required by the code and can be safely removed" />
-      <Issue TypeId="InconsistentNaming" File="AssistPurchase.Test\ClientQuestionsControllerIntegrationTest.cs" Offset="334-340" Line="14" Message="Name 'server' does not match rule 'Instance fields (private)'. Suggested name is '_server'." />
-      <Issue TypeId="ArrangeModifiersOrder" File="AssistPurchase.Test\ClientQuestionsControllerIntegrationTest.cs" Offset="351-374" Line="15" Message="Inconsistent modifiers declaration order" />
-      <Issue TypeId="FieldCanBeMadeReadOnly.Local" File="AssistPurchase.Test\ClientQuestionsControllerIntegrationTest.cs" Offset="610-625" Line="21" Message="Field can be made readonly" />
-      <Issue TypeId="RedundantUsingDirective" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="0-28" Message="Using directive is not required by the code and can be safely removed" />
-      <Issue TypeId="RedundantUsingDirective" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="30-53" Line="2" Message="Using directive is not required by the code and can be safely removed" />
-      <Issue TypeId="RedundantUsingDirective" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="55-77" Line="3" Message="Using directive is not required by the code and can be safely removed" />
-      <Issue TypeId="RedundantUsingDirective" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="79-92" Line="4" Message="Using directive is not required by the code and can be safely removed" />
-      <Issue TypeId="RedundantUsingDirective" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="94-127" Line="5" Message="Using directive is not required by the code and can be safely removed" />
-      <Issue TypeId="RedundantUsingDirective" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="129-146" Line="6" Message="Using directive is not required by the code and can be safely removed" />
-      <Issue TypeId="RedundantUsingDirective" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="148-170" Line="7" Message="Using directive is not required by the code and can be safely removed" />
-      <Issue TypeId="RedundantUsingDirective" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="172-190" Line="8" Message="Using directive is not required by the code and can be safely removed" />
-      <Issue TypeId="RedundantUsingDirective" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="192-221" Line="9" Message="Using directive is not required by the code and can be safely removed" />
-      <Issue TypeId="RedundantUsingDirective" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="223-235" Line="10" Message="Using directive is not required by the code and can be safely removed" />
-      <Issue TypeId="UnusedType.Global" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="290-328" Line="14" Message="Class 'CustomerAlertControllerIntegrationTest' is never used" />
-      <Issue TypeId="UnusedField.Compiler" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="373-379" Line="16" Message="Field 'server' is never used" />
-      <Issue TypeId="NotAccessedField.Compiler" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="412-415" Line="17" Message="Field 'url' is assigned but its value is never used" />
-      <Issue TypeId="RedundantUsingDirective" File="AssistPurchase.Test\MonitoringProductControllerIntegrationTest.cs" Offset="76-89" Line="4" Message="Using directive is not required by the code and can be safely removed" />
-      <Issue TypeId="FieldCanBeMadeReadOnly.Local" File="AssistPurchase.Test\MonitoringProductControllerIntegrationTest.cs" Offset="622-637" Line="23" Message="Field can be made readonly" />
-      <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\MonitoringProductControllerIntegrationTest.cs" Offset="3080-3095" Line="83" Message="Method has async overload" />
-      <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\MonitoringProductControllerIntegrationTest.cs" Offset="4282-4297" Line="106" Message="Method has async overload" />
-      <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\MonitoringProductControllerIntegrationTest.cs" Offset="5497-5512" Line="129" Message="Method has async overload" />
-      <Issue TypeId="RedundantUsingDirective" File="AssistPurchase.Test\TestServer.cs" Offset="61-97" Line="3" Message="Using directive is not required by the code and can be safely removed" />
-      <Issue TypeId="MemberCanBePrivate.Global" File="AssistPurchase.Test\TestServer.cs" Offset="211-214" Line="9" Message="Accessor 'Client.set' can be made private" />
-      <Issue TypeId="InconsistentNaming" File="AssistPurchase.Test\TestServer.cs" Offset="276-282" Line="10" Message="Name 'server' does not match rule 'Instance fields (private)'. Suggested name is '_server'." />
-      <Issue TypeId="MemberCanBePrivate.Global" File="AssistPurchase.Test\TestServer.cs" Offset="376-382" Line="17" Message="Method 'SetupClient' can be made private" />
+      <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="1062-1077" Line="33" Message="Method has async overload" />
+      <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="1809-1824" Line="49" Message="Method has async overload" />
+      <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="2508-2523" Line="64" Message="Method has async overload" />
+      <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\MonitoringProductControllerIntegrationTest.cs" Offset="3076-3091" Line="82" Message="Method has async overload" />
+      <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\MonitoringProductControllerIntegrationTest.cs" Offset="4278-4293" Line="105" Message="Method has async overload" />
+      <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\MonitoringProductControllerIntegrationTest.cs" Offset="5493-5508" Line="128" Message="Method has async overload" />
     </Project>
   </Issues>
 </Report>

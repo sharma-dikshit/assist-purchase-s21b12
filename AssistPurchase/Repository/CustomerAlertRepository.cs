@@ -2,7 +2,6 @@
 using System.Text;
 using AssistPurchase.Models;
 using MailKit.Security;
-using MailKit.Net.Smtp;
 using MimeKit;
 using MimeKit.Text;
 
@@ -61,7 +60,7 @@ namespace AssistPurchase.Repository
             email.Subject = "Customer Booking Received";
             email.Body = new TextPart(TextFormat.Plain) { Text = messageBody.ToString() };
 
-            using var smtp = new MailKit.Net.Smtp.SmtpClient();
+            var smtp = new MailKit.Net.Smtp.SmtpClient();
             smtp.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
             smtp.Authenticate("s21b12.testmail", "assistpurchase");
             smtp.Send(email);

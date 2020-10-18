@@ -1,7 +1,6 @@
 ﻿using AssistPurchase.Database;
 using FluentAssertions;
 using System.Net;
-using System;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
@@ -20,14 +19,14 @@ namespace AssistPurchase.Test
         {
             _sut = new TestServer();
         }
-        MonitoringProductDatabase productDatabase = new MonitoringProductDatabase();
+        readonly MonitoringProductDatabase _productDatabase = new MonitoringProductDatabase();
 
         [Fact]
         public async Task CheckRenderedProductCountWithDatabaseProductCount()
         {
             var response = await _sut.Client.GetAsync(url + "/all");
             response.EnsureSuccessStatusCode();
-            Assert.Equal(4, productDatabase.ProductDb.Count);
+            Assert.Equal(4, _productDatabase.ProductDb.Count);
         }
 
         [Fact]

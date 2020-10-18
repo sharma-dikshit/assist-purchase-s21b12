@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H6C+NAQcs4WFAuD5Nw9T8a5uj4FU0mjiL3hOyzsaFCbv5tpFl5w/LxaoWP/5ojxqpISHKSuj6bLFe9K4vWo7Tg==",
+  "dgSpecHash": "UD8rQsA5EvswYwfuA2lRi+VBBhlhiU7YsojElU6W7HdKXpOwDqImIM3aATkuAoTFxYZ3GY1IfoEFMewqviTg9Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\320088274\\source\\repos\\assist-purchase-s21b12\\AssistPurchase.Test\\AssistPurchase.Test.csproj",
+  "projectFilePath": "C:\\Users\\320088274\\Source\\Repos\\assist-purchase-s21b12\\AssistPurchase.Test\\AssistPurchase.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\320088274\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\320088274\\.nuget\\packages\\easendmail\\7.7.0.3\\easendmail.7.7.0.3.nupkg.sha512",

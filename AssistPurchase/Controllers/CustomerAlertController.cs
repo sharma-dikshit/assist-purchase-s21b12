@@ -1,6 +1,5 @@
 ﻿using AssistPurchase.Models;
 using Microsoft.AspNetCore.Mvc;
-using System;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -41,12 +40,12 @@ namespace AssistPurchase.Controllers
             if (customerDetails == null)
             {
                 _customerAlertRepository.AddCustomer(customer);
-                return Ok();
+                return Ok("New Customer");
             }
             
             customerDetails.ProductName = productName; 
             _customerAlertRepository.AddCustomer(customer);
-            return Ok();
+            return Ok("Existing Customer");
         }
     }
 }
