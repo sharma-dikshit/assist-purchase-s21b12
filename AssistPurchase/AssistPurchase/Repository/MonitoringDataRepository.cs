@@ -43,7 +43,7 @@ namespace AssistPurchase.Repository
         {
             for (var i = 0; i < MonitoringProductDb.Count; i++)
             {
-                if (MonitoringProductDb[i].ProductNumber == productNumber)
+                if (MonitoringProductDb[i].ProductNumber == productNumber) 
                 {
                     var removeProduct = MonitoringProductDb[i];
                     MonitoringProductDb.RemoveAt(i);

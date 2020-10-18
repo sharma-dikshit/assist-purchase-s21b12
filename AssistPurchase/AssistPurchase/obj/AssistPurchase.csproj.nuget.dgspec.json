@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\deeks\\OneDrive\\Desktop\\Assist Purchase\\AssistPurchase\\AssistPurchase\\AssistPurchase.csproj": {}
+    "C:\\Users\\320088274\\source\\repos\\assist-purchase-s21b12\\AssistPurchase\\AssistPurchase\\AssistPurchase.csproj": {}
   },
   "projects": {
-    "C:\\Users\\deeks\\OneDrive\\Desktop\\Assist Purchase\\AssistPurchase\\AssistPurchase\\AssistPurchase.csproj": {
+    "C:\\Users\\320088274\\source\\repos\\assist-purchase-s21b12\\AssistPurchase\\AssistPurchase\\AssistPurchase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\deeks\\OneDrive\\Desktop\\Assist Purchase\\AssistPurchase\\AssistPurchase\\AssistPurchase.csproj",
+        "projectUniqueName": "C:\\Users\\320088274\\source\\repos\\assist-purchase-s21b12\\AssistPurchase\\AssistPurchase\\AssistPurchase.csproj",
         "projectName": "AssistPurchase",
-        "projectPath": "C:\\Users\\deeks\\OneDrive\\Desktop\\Assist Purchase\\AssistPurchase\\AssistPurchase\\AssistPurchase.csproj",
-        "packagesPath": "C:\\Users\\deeks\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\deeks\\OneDrive\\Desktop\\Assist Purchase\\AssistPurchase\\AssistPurchase\\obj\\",
+        "projectPath": "C:\\Users\\320088274\\source\\repos\\assist-purchase-s21b12\\AssistPurchase\\AssistPurchase\\AssistPurchase.csproj",
+        "packagesPath": "C:\\Users\\320088274\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\320088274\\source\\repos\\assist-purchase-s21b12\\AssistPurchase\\AssistPurchase\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\deeks\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\320088274\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +25,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://artifactory.pic.philips.com:8443/artifactory/api/nuget/ct-local-nuget": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -38,6 +42,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "EASendMail": {
+              "target": "Package",
+              "version": "[7.7.0.3, )"
+            },
             "MailKit": {
               "target": "Package",
               "version": "[2.9.0, )"
@@ -61,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

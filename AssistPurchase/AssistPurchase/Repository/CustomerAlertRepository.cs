@@ -6,6 +6,7 @@ using MailKit.Net.Smtp;
 using MimeKit;
 using MimeKit.Text;
 
+
 namespace AssistPurchase.Repository
 {
     public class CustomerAlertRepository: ICustomerAlertRepository
@@ -14,8 +15,18 @@ namespace AssistPurchase.Repository
 
         public CustomerAlertRepository()
         {
+            
 
-            _customerList = new List<CustomerModel>();
+            _customerList = new List<CustomerModel>()
+            { 
+                new CustomerModel()
+                {
+                    CustomerId="A1",
+                    CustomerName="Akash",
+                    CustomerEmailId="akashspiman@gmail.com",
+                    CustomerPhoneNumber="1234765"
+                }
+            };
         }
         public void AddCustomer(CustomerModel customer)
         {
@@ -45,16 +56,18 @@ namespace AssistPurchase.Repository
             messageBody.Append("Customer Product Name: " + customer.ProductName);
 
             var email = new MimeMessage();
-            email.From.Add(MailboxAddress.Parse("from_address@example.com"));
-            email.To.Add(MailboxAddress.Parse("to_address@example.com"));
+            email.From.Add(MailboxAddress.Parse("s21b12.testmail@gmail.com"));
+            email.To.Add(MailboxAddress.Parse("akashspiman@gmail.com"));
             email.Subject = "Customer Booking Received";
-            email.Body = new TextPart(TextFormat.Plain){Text = messageBody.ToString()};
+            email.Body = new TextPart(TextFormat.Plain) { Text = messageBody.ToString() };
 
-            using var smtp = new SmtpClient();
+            using var smtp = new MailKit.Net.Smtp.SmtpClient();
             smtp.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
-            smtp.Authenticate("[USERNAME]", "[PASSWORD]");
+            smtp.Authenticate("s21b12.testmail", "assistpurchase");
             smtp.Send(email);
             smtp.Disconnect(true);
+
         }
+
     }
 }

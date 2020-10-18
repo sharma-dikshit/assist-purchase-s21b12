@@ -39,31 +39,25 @@ namespace AssistPurchase.Controllers
 
         // POST api/<MonitoringProductController>
         [HttpPost("new")]
-        public void Post([FromBody] MonitoringProducts product)
+        public IActionResult Post([FromBody] MonitoringProducts product)
         {
             _productDataRepository.AddNewProduct(product);
+            return Ok();
         }
 
         // PUT api/<MonitoringProductController>/5
         [HttpPut("update/{productNumber}")]
         public ActionResult Put(string productNumber, [FromBody] MonitoringProducts product)
         {
+            
             var findProduct = _productDataRepository.FindProduct(productNumber);
-            try
-            {
-                if (findProduct != null)
+          
+                if (findProduct == null)
                 {
-                    _productDataRepository.UpdateProduct(product);
-                   
+                    return NotFound();          
                 }
+                _productDataRepository.UpdateProduct(product);
                 return Ok();
-            }
-            catch
-            {
-                return NotFound();
-               
-            }
-
         }
 
         // DELETE api/<MonitoringProductController>/5
@@ -71,20 +65,15 @@ namespace AssistPurchase.Controllers
         public ActionResult Delete(string productNumber)
         {
             var findProduct = _productDataRepository.FindProduct(productNumber);
-            try
-            {
-                if (findProduct != null)
+            
+                if (findProduct == null)
                 {
-                    _productDataRepository.RemoveProduct(productNumber);
-
+                    return NotFound();
                 }
+                _productDataRepository.RemoveProduct(productNumber);
                 return Ok();
-            }
-            catch
-            {
-                return NotFound();
-
-            }
+            
+            
         }
     }
 }

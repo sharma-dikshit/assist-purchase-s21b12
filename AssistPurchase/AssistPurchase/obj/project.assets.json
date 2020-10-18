@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "EASendMail/7.7.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.1/EASendMail.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/EASendMail.dll": {}
+        }
+      },
       "MailKit/2.9.0": {
         "type": "package",
         "dependencies": {
@@ -110,6 +119,31 @@
     }
   },
   "libraries": {
+    "EASendMail/7.7.0.3": {
+      "sha512": "7yuyYrSgOZu9/L1Kgn5lb0e7WgH1jWS/UKrvZmiWpmmr3d+gv3kI+glF9QMqy0zb88yMHC8QJvAfYGb8J2Dv8Q==",
+      "type": "package",
+      "path": "easendmail/7.7.0.3",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "easendmail.7.7.0.3.nupkg.sha512",
+        "easendmail.nuspec",
+        "lib/net11/EASendMail.dll",
+        "lib/net20-cf/EASendMail.dll",
+        "lib/net20/EASendMail.dll",
+        "lib/net35-cf/EASendMail.dll",
+        "lib/net35/EASendMail.dll",
+        "lib/net40/EASendMail.dll",
+        "lib/net45/EASendMail.dll",
+        "lib/net461/EASendMail.dll",
+        "lib/netcoreapp2.1/EASendMail.deps.json",
+        "lib/netcoreapp2.1/EASendMail.dll",
+        "lib/portable-win81+wpa81/EASendMail.winmd",
+        "lib/uap10.0/EASendMail.winmd",
+        "tools/init.ps1"
+      ]
+    },
     "MailKit/2.9.0": {
       "sha512": "yFXqvORpRyveseJ4+RNOKNwabu/5vk1EVdY4oTKWvwDgWGTnOyop+U7iF6C1uYe5NroCCkKYPMPsgtMVX9FdcQ==",
       "type": "package",
@@ -456,23 +490,28 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "EASendMail >= 7.7.0.3",
       "MailKit >= 2.9.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\deeks\\.nuget\\packages\\": {}
+    "C:\\Users\\320088274\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\deeks\\OneDrive\\Desktop\\Assist Purchase\\AssistPurchase\\AssistPurchase\\AssistPurchase.csproj",
+      "projectUniqueName": "C:\\Users\\320088274\\Source\\Repos\\assist-purchase-s21b12\\AssistPurchase\\AssistPurchase\\AssistPurchase.csproj",
       "projectName": "AssistPurchase",
-      "projectPath": "C:\\Users\\deeks\\OneDrive\\Desktop\\Assist Purchase\\AssistPurchase\\AssistPurchase\\AssistPurchase.csproj",
-      "packagesPath": "C:\\Users\\deeks\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\deeks\\OneDrive\\Desktop\\Assist Purchase\\AssistPurchase\\AssistPurchase\\obj\\",
+      "projectPath": "C:\\Users\\320088274\\Source\\Repos\\assist-purchase-s21b12\\AssistPurchase\\AssistPurchase\\AssistPurchase.csproj",
+      "packagesPath": "C:\\Users\\320088274\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\320088274\\Source\\Repos\\assist-purchase-s21b12\\AssistPurchase\\AssistPurchase\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\deeks\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\320088274\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -480,7 +519,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://artifactory.pic.philips.com:8443/artifactory/api/nuget/ct-local-nuget": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -496,6 +536,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "EASendMail": {
+            "target": "Package",
+            "version": "[7.7.0.3, )"
+          },
           "MailKit": {
             "target": "Package",
             "version": "[2.9.0, )"
@@ -519,7 +563,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
