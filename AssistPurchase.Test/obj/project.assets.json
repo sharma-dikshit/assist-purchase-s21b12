@@ -4098,11 +4098,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\320088274\\Source\\Repos\\assist-purchase-s21b12\\AssistPurchase.Test\\AssistPurchase.Test.csproj",
+      "projectUniqueName": "C:\\Users\\320088274\\source\\repos\\assist-purchase-s21b12\\AssistPurchase.Test\\AssistPurchase.Test.csproj",
       "projectName": "AssistPurchase.Test",
-      "projectPath": "C:\\Users\\320088274\\Source\\Repos\\assist-purchase-s21b12\\AssistPurchase.Test\\AssistPurchase.Test.csproj",
+      "projectPath": "C:\\Users\\320088274\\source\\repos\\assist-purchase-s21b12\\AssistPurchase.Test\\AssistPurchase.Test.csproj",
       "packagesPath": "C:\\Users\\320088274\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\320088274\\Source\\Repos\\assist-purchase-s21b12\\AssistPurchase.Test\\obj\\",
+      "outputPath": "C:\\Users\\320088274\\source\\repos\\assist-purchase-s21b12\\AssistPurchase.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4122,8 +4122,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\320088274\\Source\\Repos\\assist-purchase-s21b12\\AssistPurchase\\AssistPurchase.csproj": {
-              "projectPath": "C:\\Users\\320088274\\Source\\Repos\\assist-purchase-s21b12\\AssistPurchase\\AssistPurchase.csproj"
+            "C:\\Users\\320088274\\source\\repos\\assist-purchase-s21b12\\AssistPurchase\\AssistPurchase.csproj": {
+              "projectPath": "C:\\Users\\320088274\\source\\repos\\assist-purchase-s21b12\\AssistPurchase\\AssistPurchase.csproj"
             }
           }
         }
@@ -4173,9 +4173,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
