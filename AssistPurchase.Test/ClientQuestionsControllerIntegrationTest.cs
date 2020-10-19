@@ -160,6 +160,21 @@ namespace AssistPurchase.Test
             responseText.Should().HaveCount(2);
         }
 
-        
+        [Fact]
+        public async Task WhenBelowScreenSize6IsAnsweredByUser()
+        {
+            var response = await _server.Client.GetAsync(url + "/BelowScreenSize/6");
+            var responseText = JsonConvert.DeserializeObject<Task[]>(await response.Content.ReadAsStringAsync());
+            responseText.Should().HaveCount(1);
+        }
+
+        [Fact]
+        public async Task WhenAboveScreenSize6IsAnsweredByUser()
+        {
+            var response = await _server.Client.GetAsync(url + "/AboveScreenSize/6");
+            var responseText = JsonConvert.DeserializeObject<Task[]>(await response.Content.ReadAsStringAsync());
+            responseText.Should().HaveCount(3);
+        }
+
     }
 }

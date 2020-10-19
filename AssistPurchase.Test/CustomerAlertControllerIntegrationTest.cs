@@ -35,6 +35,7 @@ namespace AssistPurchase.Test
             Assert.Contains("Existing Customer", returnString);
            
         }
+
         [Fact]
         public async Task NewCustomerAuthenticationSuccessfull()
         {
@@ -50,6 +51,7 @@ namespace AssistPurchase.Test
             var returnString = await response.Content.ReadAsStringAsync();
             Assert.Contains("New Customer", returnString);
         }
+
         [Fact]
         public async Task MailSentSuccessfully()
         {

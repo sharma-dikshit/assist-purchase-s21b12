@@ -88,11 +88,13 @@ namespace AssistPurchase.Repository
 
         public IEnumerable<MonitoringProducts> GetProductBelowScreenSize(string screenSize)
         {
-           var belowScreenSizeList = new List<MonitoringProducts>();
-
-            foreach (var product in MonitoringProductDb)
+            var belowScreenSizeList = new List<MonitoringProducts>();
+            foreach(var product in MonitoringProductDb)
             {
-                if (int.Parse(product.ScreenSize) <= int.Parse(screenSize))
+                string productScreenSizeTemp = product.ScreenSize;
+                float floatProductScreenSize = float.Parse(productScreenSizeTemp);
+                float floatScreenSize = float.Parse(screenSize);
+                if(floatProductScreenSize<=floatScreenSize)
                 {
                     belowScreenSizeList.Add(product);
                 }
@@ -103,10 +105,12 @@ namespace AssistPurchase.Repository
         public IEnumerable<MonitoringProducts> GetProductAboveScreenSize(string screenSize)
         {
             var aboveScreenSizeList = new List<MonitoringProducts>();
-
             foreach (var product in MonitoringProductDb)
             {
-                if (int.Parse(product.ScreenSize) >= int.Parse(screenSize))
+                string productScreenSizeTemp = product.ScreenSize;
+                float floatProductScreenSize = float.Parse(productScreenSizeTemp);
+                float floatScreenSize = float.Parse(screenSize);
+                if (floatProductScreenSize >= floatScreenSize)
                 {
                     aboveScreenSizeList.Add(product);
                 }
