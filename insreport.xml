@@ -16,7 +16,6 @@
     <IssueType Id="MethodHasAsyncOverload" Category="Common Practices and Code Improvements" CategoryId="BestPractice" Description="Method has async overload" Severity="SUGGESTION" />
     <IssueType Id="UnusedAutoPropertyAccessor.Global" Category="Potential Code Quality Issues" CategoryId="CodeSmell" SubCategory="Auto-property accessor is never used" Description="Auto-property accessor is never used: Non-private accessibility" Severity="WARNING" Global="True" />
     <IssueType Id="UnusedMethodReturnValue.Global" Category="Redundancies in Symbol Declarations" CategoryId="DeclarationRedundancy" SubCategory="Method return value is never used" Description="Method return value is never used: Non-private accessibility" Severity="SUGGESTION" Global="True" />
-    <IssueType Id="UnusedVariable" Category="Redundancies in Symbol Declarations" CategoryId="DeclarationRedundancy" Description="Unused local variable" Severity="WARNING" WikiUrl="https://www.jetbrains.com/resharperplatform/help?Keyword=UnusedVariable" />
   </IssueTypes>
   <Issues>
     <Project Name="AssistPurchase">
@@ -32,7 +31,6 @@
       <Issue TypeId="UnusedAutoPropertyAccessor.Global" File="AssistPurchase\Startup.cs" Offset="437-441" Line="17" Message="Auto-property accessor is never used" />
     </Project>
     <Project Name="AssistPurchase.Test">
-      <Issue TypeId="UnusedVariable" File="AssistPurchase.Test\ClientQuestionsControllerIntegrationTest.cs" Offset="708-716" Line="23" Message="Local variable 'response' is never used" />
       <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="1062-1077" Line="33" Message="Method has async overload" />
       <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="1811-1826" Line="50" Message="Method has async overload" />
       <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="2512-2527" Line="66" Message="Method has async overload" />

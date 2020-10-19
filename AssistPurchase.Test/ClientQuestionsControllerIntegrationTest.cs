@@ -21,6 +21,7 @@ namespace AssistPurchase.Test
         public async Task CheckIfAllProductsAreRendered()
         {
             var response = await _server.Client.GetAsync(url);
+            response.EnsureSuccessStatusCode();
             Assert.Equal(4, _productDatabase.ProductDb.Count);
         }
 
