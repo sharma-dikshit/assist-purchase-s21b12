@@ -6,13 +6,17 @@ namespace AssistPurchase.Repository
 {
     public class MonitoringDataRepository: IMonitoringDataRepository
     {
-        public List<MonitoringProducts> MonitoringProductDb = new List<MonitoringProducts>();
+        protected readonly List<MonitoringProducts> MonitoringProductDb = new List<MonitoringProducts>();
 
         public MonitoringDataRepository()
         {
             var productDb = new MonitoringProductDatabase().ProductDb;
-            for (var i = 0; i < productDb.Count; i++)
-                MonitoringProductDb.Add(productDb[i]);
+            //for (var i = 0; i < productDb.Count; i++)
+            //    MonitoringProductDb.Add(productDb[i]);
+            foreach(var product in productDb)
+            {
+                MonitoringProductDb.Add(product);
+            }
             
         }
         public IEnumerable<MonitoringProducts> GetAllProducts()

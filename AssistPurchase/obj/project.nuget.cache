@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MqrjoNtBGNc3rFcBarsJACAsuYfrd2tzkDj5zRdQB7hG4mLsv5aR6QAPYgbGr3sP/e1bSnmUh/Rz+hHQ3dhrGw==",
+  "dgSpecHash": "epYeCIJezcAogGFHgNbbQQMiCUgK7KEu3Jex1P5WD1IdoFCySamQzy4Fz2YZXTUlG1QIM3kVaadVU3aeLT7J4A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\320088274\\source\\repos\\assist-purchase-s21b12\\AssistPurchase\\AssistPurchase.csproj",
+  "projectFilePath": "C:\\Users\\320088274\\Source\\Repos\\assist-purchase-s21b12\\AssistPurchase\\AssistPurchase.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\320088274\\.nuget\\packages\\easendmail\\7.7.0.3\\easendmail.7.7.0.3.nupkg.sha512",
     "C:\\Users\\320088274\\.nuget\\packages\\mailkit\\2.9.0\\mailkit.2.9.0.nupkg.sha512",

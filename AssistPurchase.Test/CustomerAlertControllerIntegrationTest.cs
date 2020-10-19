@@ -31,7 +31,7 @@ namespace AssistPurchase.Test
                 ProductName = "X3"
             };
             var response = await _server.Client.PostAsync(url + "/CustomerAuthenticate/X3/A1", new StringContent(JsonConvert.SerializeObject(customer), Encoding.UTF8, "application/json"));
-            var returnString =await response.Content.ReadAsStringAsync();
+            var returnString = await response.Content.ReadAsStringAsync();
             Assert.Contains("Existing Customer", returnString);
            
         }

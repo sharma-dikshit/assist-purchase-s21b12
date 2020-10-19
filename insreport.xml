@@ -9,10 +9,7 @@
   </Information>
   <IssueTypes>
     <IssueType Id="ClassNeverInstantiated.Global" Category="Potential Code Quality Issues" CategoryId="CodeSmell" SubCategory="Class is never instantiated" Description="Class is never instantiated: Non-private accessibility" Severity="SUGGESTION" Global="True" WikiUrl="https://www.jetbrains.com/resharperplatform/help?Keyword=ClassNeverInstantiated.Global" />
-    <IssueType Id="FieldCanBeMadeReadOnly.Global" Category="Common Practices and Code Improvements" CategoryId="BestPractice" SubCategory="Field can be made readonly" Description="Field can be made readonly: Non-private accessibility" Severity="SUGGESTION" Global="True" WikiUrl="https://www.jetbrains.com/resharperplatform/help?Keyword=FieldCanBeMadeReadOnly.Global" />
     <IssueType Id="ForCanBeConvertedToForeach" Category="Language Usage Opportunities" CategoryId="LanguageUsage" Description="For-loop can be converted into foreach-loop" Severity="SUGGESTION" WikiUrl="https://www.jetbrains.com/resharperplatform/help?Keyword=ForCanBeConvertedToForeach" />
-    <IssueType Id="MemberCanBePrivate.Global" Category="Common Practices and Code Improvements" CategoryId="BestPractice" SubCategory="Member can be made private" Description="Member can be made private: Non-private accessibility" Severity="SUGGESTION" Global="True" WikiUrl="https://www.jetbrains.com/resharperplatform/help?Keyword=MemberCanBePrivate.Global" />
-    <IssueType Id="MemberCanBeProtected.Global" Category="Common Practices and Code Improvements" CategoryId="BestPractice" SubCategory="Member can be made protected" Description="Member can be made protected: Non-private accessibility" Severity="SUGGESTION" Global="True" WikiUrl="https://www.jetbrains.com/resharperplatform/help?Keyword=MemberCanBeProtected.Global" />
     <IssueType Id="MethodHasAsyncOverload" Category="Common Practices and Code Improvements" CategoryId="BestPractice" Description="Method has async overload" Severity="SUGGESTION" />
     <IssueType Id="UnusedAutoPropertyAccessor.Global" Category="Potential Code Quality Issues" CategoryId="CodeSmell" SubCategory="Auto-property accessor is never used" Description="Auto-property accessor is never used: Non-private accessibility" Severity="WARNING" Global="True" />
     <IssueType Id="UnusedMethodReturnValue.Global" Category="Redundancies in Symbol Declarations" CategoryId="DeclarationRedundancy" SubCategory="Method return value is never used" Description="Method return value is never used: Non-private accessibility" Severity="SUGGESTION" Global="True" />
@@ -23,17 +20,12 @@
       <Issue TypeId="ClassNeverInstantiated.Global" File="AssistPurchase\Program.cs" Offset="124-131" Line="7" Message="Class 'Program' is never instantiated" />
       <Issue TypeId="UnusedMethodReturnValue.Global" File="AssistPurchase\Repository\IMonitoringDataRepository.cs" Offset="287-293" Line="10" Message="Method 'UpdateProduct' return value is never used" />
       <Issue TypeId="UnusedMethodReturnValue.Global" File="AssistPurchase\Repository\IMonitoringDataRepository.cs" Offset="346-364" Line="11" Message="Method 'RemoveProduct' return value is never used" />
-      <Issue TypeId="MemberCanBeProtected.Global" File="AssistPurchase\Repository\MonitoringDataRepository.cs" Offset="224-230" Line="9" Message="Field 'MonitoringProductDb' can be made protected" />
-      <Issue TypeId="FieldCanBeMadeReadOnly.Global" File="AssistPurchase\Repository\MonitoringDataRepository.cs" Offset="256-275" Line="9" Message="Field can be made readonly" />
-      <Issue TypeId="ForCanBeConvertedToForeach" File="AssistPurchase\Repository\MonitoringDataRepository.cs" Offset="451-454" Line="14" Message="For-loop can be converted into foreach-loop" />
-      <Issue TypeId="ForCanBeConvertedToForeach" File="AssistPurchase\Repository\MonitoringDataRepository.cs" Offset="1996-1999" Line="58" Message="For-loop can be converted into foreach-loop" />
-      <Issue TypeId="MemberCanBePrivate.Global" File="AssistPurchase\Startup.cs" Offset="399-405" Line="17" Message="Property 'Configuration' can be made private" />
-      <Issue TypeId="UnusedAutoPropertyAccessor.Global" File="AssistPurchase\Startup.cs" Offset="437-441" Line="17" Message="Auto-property accessor is never used" />
+      <Issue TypeId="ForCanBeConvertedToForeach" File="AssistPurchase\Repository\MonitoringDataRepository.cs" Offset="2140-2143" Line="62" Message="For-loop can be converted into foreach-loop" />
     </Project>
     <Project Name="AssistPurchase.Test">
       <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="1062-1077" Line="33" Message="Method has async overload" />
-      <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="1811-1826" Line="50" Message="Method has async overload" />
-      <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="2512-2527" Line="66" Message="Method has async overload" />
+      <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="1812-1827" Line="50" Message="Method has async overload" />
+      <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="2513-2528" Line="66" Message="Method has async overload" />
       <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\MonitoringProductControllerIntegrationTest.cs" Offset="3076-3091" Line="82" Message="Method has async overload" />
       <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\MonitoringProductControllerIntegrationTest.cs" Offset="4278-4293" Line="105" Message="Method has async overload" />
       <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\MonitoringProductControllerIntegrationTest.cs" Offset="5493-5508" Line="128" Message="Method has async overload" />
