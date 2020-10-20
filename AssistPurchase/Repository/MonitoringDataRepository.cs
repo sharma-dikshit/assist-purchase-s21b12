@@ -36,11 +36,11 @@ namespace AssistPurchase.Repository
                 {
                     MonitoringProductDb.RemoveAt(i);
                     MonitoringProductDb.Add(product);
-                    return "Product has been Updated!!!";
+                    return "Product has been Updated!!!"; 
                 }
             }
             return "Unable to update Product";
-        }
+        }   
 
        public MonitoringProducts RemoveProduct(string productNumber)
         {
@@ -49,15 +49,16 @@ namespace AssistPurchase.Repository
                 if (MonitoringProductDb[i].ProductNumber == productNumber) 
                 {
                     var removeProduct = MonitoringProductDb[i];
-                    MonitoringProductDb.RemoveAt(i);
-                    return removeProduct;
+                    MonitoringProductDb.RemoveAt(i); 
+                    return removeProduct;     
                 }
             }
             return null;
-        }
+        }  
 
        public MonitoringProducts FindProduct(string productNumber)
         {
+            
             foreach (var product in MonitoringProductDb)
             {
                if (productNumber == product.ProductNumber)

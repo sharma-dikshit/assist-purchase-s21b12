@@ -8,20 +8,9 @@
     </InspectionScope>
   </Information>
   <IssueTypes>
-    <IssueType Id="ClassNeverInstantiated.Global" Category="Potential Code Quality Issues" CategoryId="CodeSmell" SubCategory="Class is never instantiated" Description="Class is never instantiated: Non-private accessibility" Severity="SUGGESTION" Global="True" WikiUrl="https://www.jetbrains.com/resharperplatform/help?Keyword=ClassNeverInstantiated.Global" />
-    <IssueType Id="ForCanBeConvertedToForeach" Category="Language Usage Opportunities" CategoryId="LanguageUsage" Description="For-loop can be converted into foreach-loop" Severity="SUGGESTION" WikiUrl="https://www.jetbrains.com/resharperplatform/help?Keyword=ForCanBeConvertedToForeach" />
     <IssueType Id="MethodHasAsyncOverload" Category="Common Practices and Code Improvements" CategoryId="BestPractice" Description="Method has async overload" Severity="SUGGESTION" />
-    <IssueType Id="UnusedAutoPropertyAccessor.Global" Category="Potential Code Quality Issues" CategoryId="CodeSmell" SubCategory="Auto-property accessor is never used" Description="Auto-property accessor is never used: Non-private accessibility" Severity="WARNING" Global="True" />
-    <IssueType Id="UnusedMethodReturnValue.Global" Category="Redundancies in Symbol Declarations" CategoryId="DeclarationRedundancy" SubCategory="Method return value is never used" Description="Method return value is never used: Non-private accessibility" Severity="SUGGESTION" Global="True" />
   </IssueTypes>
   <Issues>
-    <Project Name="AssistPurchase">
-      <Issue TypeId="UnusedAutoPropertyAccessor.Global" File="AssistPurchase\Models\MonitoringProducts.cs" Offset="169-173" Line="7" Message="Auto-property accessor is never used" />
-      <Issue TypeId="ClassNeverInstantiated.Global" File="AssistPurchase\Program.cs" Offset="124-131" Line="7" Message="Class 'Program' is never instantiated" />
-      <Issue TypeId="UnusedMethodReturnValue.Global" File="AssistPurchase\Repository\IMonitoringDataRepository.cs" Offset="287-293" Line="10" Message="Method 'UpdateProduct' return value is never used" />
-      <Issue TypeId="UnusedMethodReturnValue.Global" File="AssistPurchase\Repository\IMonitoringDataRepository.cs" Offset="346-364" Line="11" Message="Method 'RemoveProduct' return value is never used" />
-      <Issue TypeId="ForCanBeConvertedToForeach" File="AssistPurchase\Repository\MonitoringDataRepository.cs" Offset="2140-2143" Line="62" Message="For-loop can be converted into foreach-loop" />
-    </Project>
     <Project Name="AssistPurchase.Test">
       <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="1062-1077" Line="33" Message="Method has async overload" />
       <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="1812-1827" Line="50" Message="Method has async overload" />

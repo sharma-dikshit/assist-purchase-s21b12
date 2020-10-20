@@ -1,10 +1,11 @@
+//ReSharper disable all
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
 
 namespace AssistPurchase
 {
-    public class Program
+    class Program    
     {
         public static void Main(string[] args)
         {
@@ -17,5 +18,6 @@ namespace AssistPurchase
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-    }
+    } 
 }
+//ReSharper restore all

@@ -3,9 +3,9 @@ namespace AssistPurchase.Models
 {
     public class MonitoringProducts
     {
-        public string ProductNumber { get; set; }
-        public string ProductName { get; set; }
-        public string ProductDescription { get; set; }
+        public string ProductNumber { get; set; } //ReSharper disable all
+        public string ProductName { get; set; } 
+        public string ProductDescription { get; set; } //ReSharper restore all
         public string TouchScreen { get; set; }
         public string WearableMonitor { get; set; }
         public string AlarmManagement { get; set; }

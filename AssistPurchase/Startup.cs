@@ -14,7 +14,6 @@ namespace AssistPurchase
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
             services.AddSingleton<Repository.IMonitoringDataRepository, Repository.MonitoringDataRepository>();
             services.AddSingleton<Repository.IClientQuestions, Repository.ClientQuestions>();
             services.AddSingleton<Repository.ICustomerAlertRepository, Repository.CustomerAlertRepository>();
