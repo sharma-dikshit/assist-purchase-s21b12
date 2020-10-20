@@ -7,17 +7,6 @@
       <Element>Solution</Element>
     </InspectionScope>
   </Information>
-  <IssueTypes>
-    <IssueType Id="MethodHasAsyncOverload" Category="Common Practices and Code Improvements" CategoryId="BestPractice" Description="Method has async overload" Severity="SUGGESTION" />
-  </IssueTypes>
-  <Issues>
-    <Project Name="AssistPurchase.Test">
-      <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="1062-1077" Line="33" Message="Method has async overload" />
-      <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="1812-1827" Line="50" Message="Method has async overload" />
-      <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\CustomerAlertControllerIntegrationTest.cs" Offset="2513-2528" Line="66" Message="Method has async overload" />
-      <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\MonitoringProductControllerIntegrationTest.cs" Offset="3076-3091" Line="82" Message="Method has async overload" />
-      <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\MonitoringProductControllerIntegrationTest.cs" Offset="4278-4293" Line="105" Message="Method has async overload" />
-      <Issue TypeId="MethodHasAsyncOverload" File="AssistPurchase.Test\MonitoringProductControllerIntegrationTest.cs" Offset="5493-5508" Line="128" Message="Method has async overload" />
-    </Project>
-  </Issues>
+  <IssueTypes />
+  <Issues />
 </Report>

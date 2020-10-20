@@ -78,8 +78,8 @@ namespace AssistPurchase.Test
                 ScalableMeasurement = "NO",
                 Compact = "NO"
             };
-
-            var response = await _sut.Client.PostAsync(url + "/new",new StringContent(JsonConvert.SerializeObject(newProduct),Encoding.UTF8,"application/json"));
+            //ReSharper disable all
+            var response = await _sut.Client.PostAsync(url + "/new",new StringContent(JsonConvert.SerializeObject(newProduct),Encoding.UTF8,"application/json")); //ReSharper restore all
             response.StatusCode.Should().Be(HttpStatusCode.OK);
         }
 
@@ -101,8 +101,8 @@ namespace AssistPurchase.Test
                 SummarizeDataSupport = "YES",
                 ScalableMeasurement = "NO",
                 Compact = "NO"
-            };
-            var response = await _sut.Client.PutAsync(url + "/update/MX450", new StringContent(JsonConvert.SerializeObject(modifiedProduct), Encoding.UTF8, "application/json"));
+            };  //ReSharper disable all
+            var response = await _sut.Client.PutAsync(url + "/update/MX450", new StringContent(JsonConvert.SerializeObject(modifiedProduct), Encoding.UTF8, "application/json")); //ReSharper restore all
             Assert.True(response.StatusCode == HttpStatusCode.OK);
         }
 
@@ -124,8 +124,8 @@ namespace AssistPurchase.Test
                 SummarizeDataSupport = "YES",
                 ScalableMeasurement = "NO",
                 Compact = "NO"
-            };
-            var response = await _sut.Client.PutAsync(url + "/update/MXI450", new StringContent(JsonConvert.SerializeObject(modifiedProduct), Encoding.UTF8, "application/json"));
+            }; //ReSharper disable all
+            var response = await _sut.Client.PutAsync(url + "/update/MXI450", new StringContent(JsonConvert.SerializeObject(modifiedProduct), Encoding.UTF8, "application/json")); //ReSharper restore all
             Assert.True(response.StatusCode == HttpStatusCode.NotFound);
         }
 

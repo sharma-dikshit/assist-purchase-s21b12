@@ -29,9 +29,9 @@ namespace AssistPurchase.Test
                 CustomerEmailId = "akashspiman@gmail.com",
                 CustomerPhoneNumber = "1256774",
                 ProductName = "X3"
-            };
+            }; //ReSharper disable all
             var response = await _server.Client.PostAsync(url + "/CustomerAuthenticate/X3/A1", new StringContent(JsonConvert.SerializeObject(customer), Encoding.UTF8, "application/json"));
-            var returnString = await response.Content.ReadAsStringAsync();
+            var returnString = await response.Content.ReadAsStringAsync();  //ReSharper restore all
             Assert.Contains("Existing Customer", returnString);
            
         }
@@ -46,9 +46,9 @@ namespace AssistPurchase.Test
                 CustomerEmailId = "xyz@abc.com",
                 CustomerPhoneNumber = "875569454",
                 ProductName = "MX40"
-            };
+            }; //ReSharper disable all
             var response = await _server.Client.PostAsync(url + "/CustomerAuthenticate/MX40/A3", new StringContent(JsonConvert.SerializeObject(customer), Encoding.UTF8, "application/json"));
-            var returnString = await response.Content.ReadAsStringAsync();
+            var returnString = await response.Content.ReadAsStringAsync();  //ReSharper restore all
             Assert.Contains("New Customer", returnString);
         }
 
@@ -62,8 +62,8 @@ namespace AssistPurchase.Test
                 CustomerEmailId = "akashspiman@gmail.com",
                 CustomerPhoneNumber = "1223455",
                 ProductName = "X3"
-            };
-            var response = await _server.Client.PostAsync(url + "/sendAlert", new StringContent(JsonConvert.SerializeObject(customer), Encoding.UTF8, "application/json"));
+            };//ReSharper disable all
+            var response = await _server.Client.PostAsync(url + "/sendAlert", new StringContent(JsonConvert.SerializeObject(customer), Encoding.UTF8, "application/json")); //ReSharper restore all
             response.StatusCode.Should().Be(HttpStatusCode.OK);
         }
     }
