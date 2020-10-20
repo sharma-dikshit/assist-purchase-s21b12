@@ -11,8 +11,7 @@ namespace AssistPurchase.Repository
         public MonitoringDataRepository()
         {
             var productDb = new MonitoringProductDatabase().ProductDb;
-            //for (var i = 0; i < productDb.Count; i++)
-            //    MonitoringProductDb.Add(productDb[i]);
+            
             foreach(var product in productDb)
             {
                 MonitoringProductDb.Add(product);
@@ -59,10 +58,10 @@ namespace AssistPurchase.Repository
 
        public MonitoringProducts FindProduct(string productNumber)
         {
-            for (var i = 0; i < MonitoringProductDb.Count; i++)
+            foreach (var product in MonitoringProductDb)
             {
-                if (productNumber == MonitoringProductDb[i].ProductNumber)
-                    return MonitoringProductDb[i];
+               if (productNumber == product.ProductNumber)
+                    return product;
             }
 
             return null;
