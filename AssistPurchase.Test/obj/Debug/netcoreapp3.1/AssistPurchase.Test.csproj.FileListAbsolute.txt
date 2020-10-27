@@ -334,3 +334,6 @@ C:\Users\320103928\CaseStudy2\assist-purchase-s21b12\AssistPurchase.Test\obj\Deb
 C:\Users\320103928\CaseStudy2\assist-purchase-s21b12\AssistPurchase.Test\obj\Debug\netcoreapp3.1\AssistPurchase.Test.dll
 C:\Users\320103928\CaseStudy2\assist-purchase-s21b12\AssistPurchase.Test\obj\Debug\netcoreapp3.1\AssistPurchase.Test.pdb
 C:\Users\320103928\CaseStudy2\assist-purchase-s21b12\AssistPurchase.Test\obj\Debug\netcoreapp3.1\AssistPurchase.Test.genruntimeconfig.cache
+C:\Users\320103928\CaseStudy2\assist-purchase-s21b12\AssistPurchase.Test\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Users\320103928\CaseStudy2\assist-purchase-s21b12\AssistPurchase.Test\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+C:\Users\320103928\CaseStudy2\assist-purchase-s21b12\AssistPurchase.Test\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll

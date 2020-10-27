@@ -1,0 +1,102 @@
+﻿<Window x:Class="AssistToPurchaseUI.Customer.MonitoringSystems2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AssistToPurchaseUI.Customer"
+        mc:Ignorable="d"
+        Title="MonitoringSystems2" Height="550" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.Children>
+
+            <Border Background="LightPink">
+                <Button Grid.Row="0" Content="HOME" Width="50" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,5,5" Cursor="Hand" Click="Home_Click">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <TextBlock TextDecorations="Underline">  
+                    <ContentPresenter />
+                            </TextBlock>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Foreground" Value="Navy" />
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="true">
+                                    <Setter Property="Foreground" Value="Red" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Border>
+
+            <Border Margin="1,30,1,0" Height="480">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="SkyBlue" Offset="0.0"></GradientStop>
+                        <GradientStop Color="LightPink" Offset="0.50"></GradientStop>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Grid.Children>
+
+                        <DataGrid x:Name="DataGrid2" Grid.Row="0" Grid.Column="1" AutoGenerateColumns ="False" AlternatingRowBackground="SkyBlue"
+                                    HorizontalAlignment="Left" Height="200" Margin="140.667,62,-25.667,0" VerticalAlignment="Top" Width="273" Grid.RowSpan="2">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="ProductNumber" Binding="{Binding ProductNumber}" />
+                                <DataGridTextColumn Header="ProductName" Binding="{Binding ProductName}" />
+
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+
+                        <TextBlock Grid.Column="0" TextWrapping="Wrap" Margin="27,91,192.667,109.667" FontWeight="DemiBold" Width="110" Height="50" Text="Screen Size (Enter only one value ex- 5,10) :"></TextBlock>
+                        <TextBlock Grid.Column="0" Margin="21,200,196,141" TextWrapping="Wrap" FontWeight="DemiBold" Height="50" Width="120" Grid.RowSpan="2">Product Cost (Enter only one value ex 20000):</TextBlock>
+
+                        <TextBox x:Name="BelowScreenSize" Grid.Column="0" Margin="141,90,92.333,111.333" Width="100" Height="30"  />
+                        <TextBox x:Name="AboveScreenSize" Grid.Column="0" Margin="267,98,0.333,119.333" Width="100" Height="30" />
+                        <TextBox x:Name="AbovePrice" Grid.Column="0" Margin="276,218,382,0.667" Width="100" Height="30" Grid.ColumnSpan="2" />
+                        <TextBox x:Name="BelowPrice" Grid.Column="0" Margin="159,218,109.667,0" Width="100" Height="30" />
+
+                        <Button x:Name="GetScrSizeAndCost" Content="Filter"  Grid.Column="0" Style="{StaticResource ResourceKey=ButtonStyle}" Margin="209,20.667,61,110" Click="ScrCost_Click" Grid.Row="1"/>
+                        <TextBlock Grid.Column="0" HorizontalAlignment="Left" FontStyle="Italic" FontWeight="DemiBold" Margin="21,25,0,0" TextAlignment="Center" TextWrapping="Wrap"  VerticalAlignment="Top" Width="304" Height="33">
+                            Want to get More detailed List of Products then you can choose below options.
+                        </TextBlock>
+                        <TextBlock x:Name="FilterTextBox" HorizontalAlignment="Left" Margin="31,10.333,0,0" Grid.Row="2" TextWrapping="Wrap" 
+                                   Visibility="Hidden" Text= "{Binding GetFilteredProducts}" FontStyle="Italic" FontWeight="DemiBold" TextAlignment="Center" VerticalAlignment="Top" Width="241" Height="35">
+                            If Cost and Screen Size is your priority then, Please enter it. We will give respective list.
+                        </TextBlock>
+                        <Button Content="Contact Us" Grid.Column="1" BorderBrush="Green" HorizontalAlignment="Left" Margin="159,91,0,0" 
+                                Style="{StaticResource ResourceKey=ButtonStyle}" Grid.Row="1" VerticalAlignment="Top" Click="Contactus_Click">
+
+                        </Button>
+                        <TextBlock x:Name="ContactUstext" HorizontalAlignment="Left" Margin="9,91,0,0" Grid.Row="1" TextWrapping="Wrap" TextAlignment="Center" 
+                                  Text="{Binding GetScrSizeAndCost}" FontWeight="DemiBold" Visibility="Hidden" VerticalAlignment="Top" Height="78" Width="391" Grid.ColumnSpan="2">
+                            Get your desired product ? Want to deliver at your doorstep ? Then you are just one step away. Connect with us by pressing Contact Us =>
+                        </TextBlock>
+                        <TextBlock HorizontalAlignment="Left" Margin="161,77,0,0" TextWrapping="Wrap" Text="BelowScreenSize" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="276,74,0,0" TextWrapping="Wrap" Text="AboveScreenSize" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="173,195,0,0" TextWrapping="Wrap" Text="BelowCost" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="287,195,0,0" TextWrapping="Wrap" Text="AboveCost" VerticalAlignment="Top"/>
+                        <Button Content="Filter" HorizontalAlignment="Left" Margin="209,150,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=ButtonStyle}"
+                                Click="ScreenFilter_Click"></Button>
+                    </Grid.Children>
+                </Grid>
+            </Border>
+        </Grid.Children>
+    </Grid>
+</Window>

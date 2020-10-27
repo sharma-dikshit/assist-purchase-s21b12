@@ -22,7 +22,7 @@ namespace AssistPurchase.Repository
                 {
                     CustomerId="A1",
                     CustomerName="Akash",
-                    CustomerEmailId="akashspiman@gmail.com",
+                    CustomerEmailId="sharma.dikshit404@gmail.com",
                     CustomerPhoneNumber="1234765"
                 }
             };
@@ -55,14 +55,14 @@ namespace AssistPurchase.Repository
             messageBody.Append("Customer Product Name: " + customer.ProductName);
 
             var email = new MimeMessage();
-            email.From.Add(MailboxAddress.Parse("s21b12.testmail@gmail.com"));
-            email.To.Add(MailboxAddress.Parse("akashspiman@gmail.com"));
+            email.From.Add(MailboxAddress.Parse("sharma.dikshit404@gmail.com"));
+            email.To.Add(MailboxAddress.Parse("sharma.dikshit001@gmail.com"));
             email.Subject = "Customer Booking Received";
             email.Body = new TextPart(TextFormat.Plain) { Text = messageBody.ToString() };
 
             var smtp = new MailKit.Net.Smtp.SmtpClient();
             smtp.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
-            smtp.Authenticate("s21b12.testmail", "assistpurchase");
+            smtp.Authenticate("sharma.dikshit404@gmail.com", "pa$$word@123");
             smtp.Send(email);
             smtp.Disconnect(true);
 
