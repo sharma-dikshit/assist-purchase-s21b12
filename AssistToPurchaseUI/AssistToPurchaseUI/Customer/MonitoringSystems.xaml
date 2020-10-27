@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AssistToPurchaseUI.Customer"
         mc:Ignorable="d"
-        Title="MonitoringSystems" Height="690" Width="800">
+        Title="MonitoringSystems" Height="600" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
@@ -34,7 +34,7 @@
                 </Button>
             </Border>
 
-            <Border Grid.Row="1" Margin="5" Height="680">
+            <Border Grid.Row="1" Margin="5" Height="530">
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                         <GradientStop Color="SkyBlue" Offset="0.0"></GradientStop>
@@ -58,7 +58,7 @@
                                    FontStyle="Italic" FontSize="15" FontWeight="DemiBold" TextAlignment="Center"  Margin="10,20,20,160">
                             To Get the list of Products available with us, Please Click on Get All Products
                         </TextBlock>
-                        <Button Content="Get All Products"  Margin="10,0,10,0" Grid.Column="0" Grid.Row="0" Style="{StaticResource ResourceKey=buttonStyle}" 
+                        <Button x:Name="GetAllProducts" Content="Get All Products"  Margin="10,0,10,0" Grid.Column="0" Grid.Row="0" Style="{StaticResource ResourceKey=ButtonStyle}" 
                                 Click="Products_Click">
                         </Button>
 
@@ -94,29 +94,20 @@
                             <ComboBoxItem>NO</ComboBoxItem>
                         </ComboBox>
                         <Button x:Name="GetFilteredProducts" Content="Get Products" Margin="136.667,156.333,152,9.667" BorderBrush="Blue" Grid.Column="1" Grid.Row="1" 
-                                Click="GetYesNoProduct_Click" Style="{StaticResource ResourceKey=buttonStyle}"></Button>
-
-                        <TextBlock Grid.Row="2" Grid.Column="0" Margin="22,52.333,198.333,-4" FontWeight="DemiBold" Grid.RowSpan="2">Screen Size :</TextBlock>
-                        <TextBlock Grid.Row="2" Grid.Column="0" Margin="21,103.333,198,93" FontWeight="DemiBold">Product Cost :</TextBlock>
-
-                        <TextBox Grid.Row="2" Grid.Column="0" Margin="126,50.333,76.667,145.667" Width="100" Height="30" RenderTransformOrigin="0.533,0.078" ></TextBox>
-                        <TextBox Grid.Row="2" Grid.Column="0" Margin="126,94.333,77.333,102.333" Width="100" Height="30" ></TextBox>
-
-                        <Button x:Name="GetScrSizeAndCost" Content="Filter"  Grid.Column="0" Grid.Row="2" Style="{StaticResource ResourceKey=buttonStyle}" Margin="127,138.333,77.667,49.667" Click="ScrCost_Click"></Button>
-                        <TextBlock Grid.Column="1" HorizontalAlignment="Left" FontStyle="Italic" FontWeight="DemiBold" Margin="24.667,10.333,0,0" TextAlignment="Center" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="347" Height="33">
+                                Visibility="Hidden" Click="GetYesNoProduct_Click" Height="40" Width="100" Style="{StaticResource ResourceKey=ButtonStyle}">
+                        </Button>
+                        <TextBlock x:Name="ComboTextBox" Grid.Column="1" HorizontalAlignment="Left" FontStyle="Italic" Visibility="Hidden" Text="{Binding GetAllProducts}"
+                                   FontWeight="DemiBold" Margin="24.667,10.333,0,0" TextAlignment="Center" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="347" Height="33">
                             Want to get More detailed List of Products then you can choose below options.
                         </TextBlock>
-                        <TextBlock HorizontalAlignment="Left" Margin="31,10.333,0,0" Grid.Row="2" TextWrapping="Wrap" 
-                                   FontStyle="Italic" FontWeight="DemiBold" TextAlignment="Center" VerticalAlignment="Top" Width="241" Height="35">
-                            If Cost and Screen Size is your priority then, Please enter it. We will give respective list.
+                        <TextBlock x:Name="NextInfo" HorizontalAlignment="Left" Margin="45,28.333,0,-9.333" Grid.Row="2" TextWrapping="Wrap" Text="{Binding GetFilteredProducts}" VerticalAlignment="Top"
+                                   FontStyle="Italic" FontWeight="DemiBold" TextAlignment="Center" Visibility="Hidden" Height="31" Width="263" Grid.ColumnSpan="2">
+                            Want to get more detailed information of product ? Then Please cick on NEXT button =>
                         </TextBlock>
-                        <Button Content="Contact Us" Grid.Column="1" BorderBrush="Green" HorizontalAlignment="Left" Margin="194.667,100.333,0,0" 
-                                Style="{StaticResource ResourceKey=buttonStyle}" Grid.Row="2" VerticalAlignment="Top" Click="Contactus_Click">
+                        <Button x:Name="NextButton" Content="NEXT" BorderBrush="Blue" Visibility="Hidden" Grid.Column="1" HorizontalAlignment="Left" Margin="138,19.333,0,-10" Grid.Row="2" VerticalAlignment="Top" 
+                                 Style="{StaticResource ResourceKey=ButtonStyle}" Click="Next_Click" >
 
                         </Button>
-                        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="114.667,32.333,0,0" Grid.Row="2" TextWrapping="Wrap" TextAlignment="Center" FontWeight="DemiBold" VerticalAlignment="Top" Height="78" Width="257">
-                            Get your desired product ? Want to deliver at your doorstep ? Then you are just one step away. Connect with us by below Button
-                        </TextBlock>
                     </Grid.Children>
                 </Grid>
             </Border>

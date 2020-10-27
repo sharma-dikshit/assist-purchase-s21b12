@@ -52,7 +52,7 @@
                     </LinearGradientBrush>
                 </Border.Background>
                 <Button x:Name="Add" Content="Add product" HorizontalAlignment="Center" VerticalAlignment="Center" 
-                        BorderBrush="Black" Style="{StaticResource ResourceKey=buttonStyle2}" Click="Add_Service"></Button>
+                        BorderBrush="Black" Style="{StaticResource ResourceKey=ButtonStyle2}" Click="Add_Service"></Button>
             </Border>
 
             <Border Height="90" Grid.Row="3">
@@ -63,7 +63,7 @@
                     </LinearGradientBrush>
                 </Border.Background>
                 <Button x:Name="Update" Content="Update product" HorizontalAlignment="Center" VerticalAlignment="Center" 
-                        BorderBrush="Black" Style="{StaticResource ResourceKey=buttonStyle2}" Click="Update_Service"></Button>
+                        BorderBrush="Black" Style="{StaticResource ResourceKey=ButtonStyle2}" Click="Update_Service"></Button>
             </Border>
 
             <Border Height="100" Grid.Row="4">
@@ -74,7 +74,7 @@
                     </LinearGradientBrush>
                 </Border.Background>
                 <Button x:Name="Delete" Content="Remove product" HorizontalAlignment="Center" VerticalAlignment="Center" 
-                        BorderBrush="Black" Style="{StaticResource ResourceKey=buttonStyle2}" Click="Delete_Service"></Button>
+                        BorderBrush="Black" Style="{StaticResource ResourceKey=ButtonStyle2}" Click="Delete_Service"></Button>
             </Border>
 
 

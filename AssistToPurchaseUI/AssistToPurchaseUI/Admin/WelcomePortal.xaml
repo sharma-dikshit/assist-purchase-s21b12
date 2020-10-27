@@ -46,10 +46,10 @@
                     </Grid.RowDefinitions>
 
                     <Grid.Children>
-                        <Button x:Name="Admin" Grid.Column="0" Grid.Row="0" Content="Admin" Style="{StaticResource ResourceKey=buttonStyle}"
+                        <Button x:Name="Admin" Grid.Column="0" Grid.Row="0" Content="Admin" Style="{StaticResource ResourceKey=ButtonStyle}"
                                     Margin="20" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Admin_Click">
                         </Button>
-                        <Button x:Name="Customer" Content="Customer" Grid.Column="1" Grid.Row="0" Style="{StaticResource ResourceKey=buttonStyle}"
+                        <Button x:Name="Customer" Content="Customer" Grid.Column="1" Grid.Row="0" Style="{StaticResource ResourceKey=ButtonStyle}"
                                     Margin="20" Click="Customer_Click">
                         </Button>
                     </Grid.Children>

@@ -32,7 +32,7 @@ namespace AssistToPurchaseUI.Customer
 
         private async void Products_Click(object sender, RoutedEventArgs e)
         {
-            MonitoringProducts _Model = new MonitoringProducts();
+            //MonitoringProducts _Model = new MonitoringProducts();
             HttpClient client = new HttpClient();
             string apiUrl = ConfigurationManager.AppSettings["MailApi"] + "ClientQuestions/MonitoringProducts";
             client.BaseAddress = new Uri(apiUrl);
@@ -75,6 +75,9 @@ namespace AssistToPurchaseUI.Customer
             {
                 MessageBox.Show("Unable to get details");
             }
+            ComboTextBox.Visibility = Visibility.Visible;
+            GetFilteredProducts.Visibility = Visibility.Visible;
+
         }
 
         private void Home_Click(object sender, RoutedEventArgs e)
@@ -91,14 +94,47 @@ namespace AssistToPurchaseUI.Customer
             Close();
         }
 
-        private void ScrCost_Click(object sender, RoutedEventArgs e)
+        private async void GetYesNoProduct_Click(object sender, RoutedEventArgs e)
         {
+            HttpClient client = new HttpClient();
+            string VerbalValue = ProductList2.Text;
+            string PropertyValue = ProductList.Text;
+            var Url = "ClientQuestions/MonitoringProducts/"+ PropertyValue + "/" + VerbalValue;
+             string apiUrl = ConfigurationManager.AppSettings["MailApi"] + Url;
+            //string apiUrl = ConfigurationManager.AppSettings["MailApi"] + "ClientQuestions/MonitoringProducts/TouchScreen/YES";
+            client.BaseAddress = new Uri(apiUrl);
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
+            HttpResponseMessage response = client.GetAsync(apiUrl).Result;
+
+            if (response.IsSuccessStatusCode)
+            {
+                
+                var customerJsonString = await response.Content.ReadAsStringAsync();          
+                var deserialized = JsonConvert.DeserializeObject<IEnumerable<MonitoringProducts>>(custome‌​rJsonString);                
+                List<ProductSample> _ModelList = new List<ProductSample>();
+
+                foreach (var item in deserialized)
+                {
+                    _ModelList.Add(new ProductSample() { ProductNumber = item.ProductNumber, ProductName = item.ProductName});
+                }
+                DataGrid2.ItemsSource = _ModelList;
+            }
+            else
+            {
+                MessageBox.Show("Unable to get details");
+            }
+
+            NextInfo.Visibility = Visibility.Visible;  
+            NextButton.Visibility = Visibility.Visible;
         }
 
-        private void GetYesNoProduct_Click(object sender, RoutedEventArgs e)
+        private void Next_Click(object sender, RoutedEventArgs e)
         {
-
+            MonitoringSystems2 _Monitor = new MonitoringSystems2();
+            _Monitor.Show();
+            Close();
         }
     }
 }

@@ -58,10 +58,10 @@
                 </Border.Background>
                 <StackPanel>
                     <TextBlock Margin="20,40,20,10" VerticalAlignment="Center" Foreground="Black" FontWeight="Light" FontSize="25" HorizontalAlignment="Center"> To See Product Details</TextBlock>
-                    <Button x:Name="Details" Content="Click Here" Style="{StaticResource ResourceKey=buttonStyle}"  FontSize="18" FontStyle="Italic" Background="RosyBrown" Click="Details_Click"></Button>
+                    <Button x:Name="Details" Content="Click Here" Style="{StaticResource ResourceKey=ButtonStyle}"  FontSize="18" FontStyle="Italic" Background="RosyBrown" Click="Details_Click"></Button>
 
                     <TextBlock Margin="20,60,20,10" HorizontalAlignment="Center" FontWeight="Light" FontSize="25">To Contact SalesPerson</TextBlock>
-                    <Button Content="Click Here" Style="{StaticResource ResourceKey=buttonStyle}" FontSize="18" FontStyle="Italic" Background="RosyBrown" Click="Contact_Click"></Button>
+                    <Button Content="Click Here" Style="{StaticResource ResourceKey=ButtonStyle}" FontSize="18" FontStyle="Italic" Background="RosyBrown" Click="Contact_Click"></Button>
                 </StackPanel>
             </Border>
         </Grid.Children>

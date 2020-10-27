@@ -53,7 +53,7 @@
                        Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center" TextDecorations="Underline" FontFamily="Comic Sans MS" ></TextBlock>
             <TextBlock x:Name="ErrorMesg" Margin="2" Width="200" Height="20"></TextBlock>
             <TextBox x:Name="ProductNameDel" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250" Height="50"></TextBox>
-            <Button x:Name="Remove" Content="Remove" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20" Style="{StaticResource ResourceKey=buttonStyle}" Click="Remove_Click"></Button>
+            <Button x:Name="Remove" Content="Remove" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20" Style="{StaticResource ResourceKey=ButtonStyle}" Click="Remove_Click"></Button>
         </StackPanel>
     </Grid>
 </Window>

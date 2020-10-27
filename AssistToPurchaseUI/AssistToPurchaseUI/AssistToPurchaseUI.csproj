@@ -109,6 +109,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Customer\MonitoringSystems2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Customer\ProductDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -144,6 +148,9 @@
     </Compile>
     <Compile Include="Customer\MonitoringSystems.xaml.cs">
       <DependentUpon>MonitoringSystems.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\MonitoringSystems2.xaml.cs">
+      <DependentUpon>MonitoringSystems2.xaml</DependentUpon>
     </Compile>
     <Compile Include="Customer\ProductDetails.xaml.cs">
       <DependentUpon>ProductDetails.xaml</DependentUpon>

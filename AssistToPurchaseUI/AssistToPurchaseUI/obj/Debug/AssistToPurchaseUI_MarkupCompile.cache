@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\320103928\CaseStudy2\assist-purchase-s21b12\AssistToPurchaseUI\AssistToPurchaseUI\obj\Debug\
+C:\Users\320103928\CaseStudy2\AssistToPurchaseUI\AssistToPurchaseUI\obj\Debug\
 AssistToPurchaseUI
 none
 false
 DEBUG;TRACE
-C:\Users\320103928\CaseStudy2\assist-purchase-s21b12\AssistToPurchaseUI\AssistToPurchaseUI\App.xaml
-11106535077
+C:\Users\320103928\CaseStudy2\AssistToPurchaseUI\AssistToPurchaseUI\App.xaml
+12-795116922
 
-172085337603
-25-53228629
-Admin\AdminAddService.xaml;Admin\AdminRemoveProduct.xaml;Admin\AdminSelectionPortal.xaml;Admin\UpdateService.xaml;Admin\WelcomePortal.xaml;Customer\CustomerSelection.xaml;Customer\Customer_Registration.xaml;Customer\MonitoringSystems.xaml;Customer\ProductDetails.xaml;MainWindow.xaml;Resources\Styles\ControlStyles.xaml;
+18-1215665639
+25-1847824837
+Admin\AdminAddService.xaml;Admin\AdminRemoveProduct.xaml;Admin\AdminSelectionPortal.xaml;Admin\UpdateService.xaml;Admin\WelcomePortal.xaml;Customer\CustomerSelection.xaml;Customer\Customer_Registration.xaml;Customer\MonitoringSystems.xaml;Customer\MonitoringSystems2.xaml;Customer\ProductDetails.xaml;MainWindow.xaml;Resources\Styles\ControlStyles.xaml;
 
 False
 

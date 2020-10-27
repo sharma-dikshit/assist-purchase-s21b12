@@ -41,7 +41,7 @@
                     <ColumnDefinition Width="auto"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Grid.Children>
-                    <Button Grid.Column="0" Name="AboutUs"  Content="About Us"  Margin="20" Style="{StaticResource ResourceKey=buttonStyle}" BorderBrush="Red" Click="AboutUs_Click"></Button>
+                    <Button Grid.Column="0" Name="AboutUs"  Content="About Us"  Margin="20" Style="{StaticResource ResourceKey=ButtonStyle}" BorderBrush="Red" Click="AboutUs_Click"></Button>
                     <TextBlock x:Name="AboutUsTextBox" Grid.Column="1" Margin="90,10,0,10" VerticalAlignment="Center" FontSize="10" Height="80"  Width="650" 
                                TextWrapping="Wrap" Text="{Binding AboutUs}" TextAlignment="Center" Visibility="Hidden" Foreground="Black" HorizontalAlignment="Right"> Hello
                         Philips continuous monitoring portfolio, which includes IntelliVue, Efficia,
@@ -119,12 +119,12 @@
                     <TextBlock Grid.Row="0" Grid.Column="0" TextAlignment="Center" Margin="20" Width="auto" FontSize="15" FontStyle="Italic">
                         Want to Get More information of the monitoring product with Philips ? Then Please click here =>
                     </TextBlock>
-                    <Button Grid.Column="1" Grid.Row="0" Margin="10" Content="Get Details" Style="{StaticResource ResourceKey=buttonStyle}" Click="GetDetails_Click"></Button>
+                    <Button Grid.Column="1" Grid.Row="0" Margin="10" Content="Get Details" Style="{StaticResource ResourceKey=ButtonStyle}" Click="GetDetails_Click"></Button>
 
                     <TextBlock Grid.Row="1" Grid.Column="0" TextAlignment="Center" Margin="10" Width="650" FontSize="15" FontStyle="Italic" TextWrapping="Wrap">
                         If You already know about patient monitoring systems and want to purchase or contact Philips person, then Please click here =>
                     </TextBlock>
-                    <Button Grid.Column="1" Grid.Row="1" Margin="10" Content="Contact Us" Style="{StaticResource ResourceKey=buttonStyle}" Click="ContactUs_Click"></Button>
+                    <Button Grid.Column="1" Grid.Row="1" Margin="10" Content="Contact Us" Style="{StaticResource ResourceKey=ButtonStyle}" Click="ContactUs_Click"></Button>
                 </Grid.Children>
             </Grid>
         </Border>

@@ -1,20 +1,10 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace AssistToPurchaseUI.Admin
 {
@@ -59,6 +49,7 @@ namespace AssistToPurchaseUI.Admin
                 errormessage.Text = "Enter Product Number.";
                 ProductNumberTextBox.Focus();
             }
+            /*
             else if (ProductNameTextBox.Text.Length == 0)
             {
                 errormessage.Text = "Enter Product Name.";
@@ -113,22 +104,24 @@ namespace AssistToPurchaseUI.Admin
             {
                 errormessage.Text = "Does product compact in size ?";
                 CompactTextBox.Focus();
-            }
+            }*/
             else
             {
-                Models.MonitoringProducts _Model = new Models.MonitoringProducts();
-                _Model.ProductNumber = ProductNumberTextBox.Text;
-                _Model.ProductName = ProductNameTextBox.Text;
-                _Model.ProductDescription = ProductDescriptionTextBox.Text;
-                _Model.ScalableMeasurement = ScalableMeasurementTextBox.Text;
-                _Model.ScreenSize = ScreenSizeTextBox.Text;
-                _Model.SummarizeDataSupport = SummarizeDataSupportTextBox.Text;
-                _Model.WearableMonitor = WearableMonitorTextBox.Text;
-                _Model.ConnectivitySupport = ConnectivitySupportTextBox.Text;
-                _Model.AlarmManagement = AlarmManagementTextBox.Text;
-                _Model.Compact = CompactTextBox.Text;
-                _Model.Cost = CostTextBox.Text;
-                _Model.TouchScreen = TouchScreenTextBox.Text;
+                Models.MonitoringProducts _Model = new Models.MonitoringProducts
+                {
+                    ProductNumber = ProductNumberTextBox.Text,
+                    ProductName = ProductNameTextBox.Text,
+                    ProductDescription = ProductDescriptionTextBox.Text,
+                    ScalableMeasurement = ScalableMeasurementTextBox.Text,
+                    ScreenSize = ScreenSizeTextBox.Text,
+                    SummarizeDataSupport = SummarizeDataSupportTextBox.Text,
+                    WearableMonitor = WearableMonitorTextBox.Text,
+                    ConnectivitySupport = ConnectivitySupportTextBox.Text,
+                    AlarmManagement = AlarmManagementTextBox.Text,
+                    Compact = CompactTextBox.Text,
+                    Cost = CostTextBox.Text,
+                    TouchScreen = TouchScreenTextBox.Text
+                };
 
                 HttpClient client = new HttpClient();
                 string apiUrl = ConfigurationManager.AppSettings["MailApi"] + "MonitoringProduct/new";
