@@ -47,7 +47,7 @@ namespace AssistPurchase.Controllers
 
         // PUT api/<MonitoringProductController>/5
         [HttpPut("update/{productNumber}")]
-        public ActionResult Put(string productNumber, [FromBody] MonitoringProducts product)
+        public ActionResult Put([FromBody] MonitoringProducts product, string productNumber)
         {
             
             var findProduct = _productDataRepository.FindProduct(productNumber);
