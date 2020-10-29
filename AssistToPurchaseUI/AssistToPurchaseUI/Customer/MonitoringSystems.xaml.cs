@@ -120,7 +120,10 @@ namespace AssistToPurchaseUI.Customer
 
                 foreach (var item in deserialized)
                 {
-                    if (helper(item.WearableMonitor, monitor, item.TouchScreen, touch) && helper(item.Compact , compact , item.ConnectivitySupport ,connectivity))
+                    bool conditionOne = helper(item.WearableMonitor, monitor, item.TouchScreen, touch);
+                    bool conditionTwo = helper(item.Compact, compact, item.ConnectivitySupport, connectivity);
+                    bool final = conditionOne & conditionTwo;
+                    if (final)
                         _ProductList.Add(new ProductSample() { ProductNumber = item.ProductNumber, ProductName = item.ProductName, TouchScreen = item.TouchScreen, 
                             Connectivity = item.ConnectivitySupport, Compact = item.Compact });
                 }
